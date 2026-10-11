@@ -1,0 +1,63 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: #2d3436;
+}
+
+header { text-align: center; padding: 30px 20px 10px; color: #fff; }
+header h1 { font-size: 1.8rem; }
+
+main { max-width: 480px; margin: 0 auto; padding: 16px; }
+
+.balance-card {
+  background: linear-gradient(135deg, #00b894, #55efc4);
+  color: #fff; border-radius: 16px; padding: 24px;
+  text-align: center; margin-bottom: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+.balance-card h2 { font-size: 2.2rem; margin-top: 6px; }
+
+.card {
+  background: #fff; border-radius: 16px; padding: 20px; margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+.card h3 { margin-bottom: 12px; font-size: 1.05rem; }
+
+form input, form select {
+  width: 100%; padding: 12px; margin-bottom: 10px;
+  border: 2px solid #dfe6e9; border-radius: 10px; font-size: 1rem;
+}
+form input:focus, form select:focus { outline: none; border-color: #6c5ce7; }
+
+.row { display: flex; gap: 10px; }
+.row input { flex: 1; }
+
+form button {
+  width: 100%; padding: 14px; border: none; border-radius: 10px;
+  background: #6c5ce7; color: #fff; font-size: 1rem; font-weight: bold; cursor: pointer;
+}
+form button:hover { background: #5a4bd1; }
+
+.filter-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; color: #fff; font-weight: 600; }
+.filter-row select { flex: 1; padding: 10px; border-radius: 10px; border: none; font-size: .95rem; }
+
+.expense-item {
+  display: flex; justify-content: space-between; align-items: center;
+  background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+.expense-info small { display: block; color: #636e72; margin-top: 2px; }
+.expense-right { display: flex; align-items: center; gap: 10px; }
+.amount { font-weight: 700; color: #d63031; }
+.delete-btn { background: none; border: none; cursor: pointer; font-size: 1.1rem; }
+
+.chart-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: .85rem; }
+.chart-label { width: 110px; }
+.bar-bg { flex: 1; background: #f1f2f6; border-radius: 20px; height: 14px; overflow: hidden; }
+.bar { height: 100%; background: linear-gradient(90deg, #6c5ce7, #a29bfe); border-radius: 20px; transition: width .5s; }
+.chart-val { width: 70px; text-align: right; font-weight: 600; }
+
+.empty { text-align: center; color: #fff; padding: 20px; }
+footer { text-align: center; color: rgba(255,255,255,.85); padding: 16px; font-size: .85rem; }

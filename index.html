@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pocket Tracker - Expense Manager</title>
+  <meta name="theme-color" content="#6c5ce7">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💸 Pocket Tracker</h1>
+    <p>Track your money, the smart way</p>
+  </header>
+
+  <main>
+    <!-- Total Spent Card -->
+    <section class="balance-card">
+      <span>Total Spent</span>
+      <h2 id="totalAmount">₹0</h2>
+    </section>
+
+    <!-- Add Expense Form -->
+    <section class="card">
+      <h3>➕ Add Expense</h3>
+      <form id="expenseForm">
+        <input type="text" id="desc" placeholder="Expense name (e.g., Tea, Bus fare)" required>
+        <div class="row">
+          <input type="number" id="amount" placeholder="Amount ₹" min="1" required>
+          <input type="date" id="date" required>
+        </div>
+        <select id="category" required>
+          <option value="" disabled selected>Select category</option>
+          <option>🍔 Food</option>
+          <option>🚌 Transport</option>
+          <option>🛍️ Shopping</option>
+          <option>💡 Bills</option>
+          <option>🎬 Entertainment</option>
+          <option>📦 Others</option>
+        </select>
+        <button type="submit">Add Expense</button>
+      </form>
+    </section>
+
+    <!-- Category Chart -->
+    <section class="card" id="chartCard">
+      <h3>📊 Spending by Category</h3>
+      <div id="chart"></div>
+    </section>
+
+    <!-- Filter -->
+    <section class="filter-row">
+      <label>🔍 Filter:</label>
+      <select id="filter">
+        <option value="All">All Categories</option>
+        <option>🍔 Food</option>
+        <option>🚌 Transport</option>
+        <option>🛍️ Shopping</option>
+        <option>💡 Bills</option>
+        <option>🎬 Entertainment</option>
+        <option>📦 Others</option>
+      </select>
+    </section>
+
+    <!-- Expense List -->
+    <section id="expenseList"></section>
+  </main>
+
+  <footer>Made with ❤️ for Hackathon 2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>
